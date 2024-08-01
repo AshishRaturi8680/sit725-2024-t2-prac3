@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Locate a Socket</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <style>
+        .intro {
+            max-width: 800px;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+            text-align: justify;
+        }
+
+        .brand-logo {
+            display: inline-block;
+            font-size: 2em;
+            margin: 20px 0;
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .brand-logo::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 1s ease;
+        }
+
+        .brand-logo:hover::before {
+            width: 100%;
+        }
+
+        .brand-logo span {
+            display: inline-block;
+            position: relative;
+            left: -100%;
+            transition: left 1s ease;
+        }
+
+        .brand-logo:hover span {
+            left: 0;
+        }
+    </style>
+  </head>
+
+  <body>
+    <a href="#" class="brand-logo"><span>Locate a Socket</span></a>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/images.jpeg" alt="Webtemplate">
+          <span class="card-title" style="font-size: 18px">Welcome to "Locate a Socket", your ultimate friend for a smooth electric vehicle travel. As the world transitions to sustainable mobility, the demand for dependable and accessible charging infrastructure has never been greater. "Locate a Socket" aims to meet this demand by giving electric vehicle (EV) owners an easy-to-use platform for finding, navigating, and utilizing charging stations.</span>
+        </div>
+        <div class="card-content">
+          <p>Click the button below to log in or sign up.</p><br>
+          <a class="waves-effect waves-light btn" id="loginSignupButton">Login/Signup</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="loginSignupForm" class="container" style="display: none;">
+      <div class="card">
+        <div class="card-content">
+          <h3>Login/Signup</h3>
+          <form>
+            <div class="input-field">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username">
+            </div>
+            <div class="input-field">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password">
+            </div>
+            <button class="waves-effect waves-light btn" type="submit">Login</button>
+            <button class="waves-effect waves-light btn" type="button">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+      document.getElementById('loginSignupButton').addEventListener('click', function() {
+        var form = document.getElementById('loginSignupForm');
+        form.style.display = 'block';
+        window.scrollTo(0, form.offsetTop);
+      });
+    </script>
+  </body>
+</html>
